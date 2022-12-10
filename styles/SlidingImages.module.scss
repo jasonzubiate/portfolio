@@ -1,0 +1,70 @@
+.container { 
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slide {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-84%);
+  }
+}
+.container-split {
+  width: 50%;
+  position: relative;
+}
+.container-left {
+  animation: shift-left 1s forwards;
+}
+.container-right {
+  animation: shift-right 1s forwards;
+}
+@keyframes shift-left {
+  from {
+    transform: translateY(-2%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes shift-right {
+  from {
+    transform: translateY(2.2%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.image {
+  object-fit: cover;
+  padding: 0rem 1.7rem 1.7rem 0rem;
+  animation: fadeIn 1s forwards;
+}
+.image-container-short{
+  width: max(20vw, 100%);
+	position: relative;
+	aspect-ratio: .9/1.2;
+}
+.image-container-long{
+  width: max(20vw, 100%);
+	position: relative;
+	aspect-ratio: .8/1.2;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    animation: slide 290s linear 3s forwards;
+  }
+}

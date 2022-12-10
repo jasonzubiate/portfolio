@@ -1,0 +1,56 @@
+.container {
+	width: 100%;
+	display: flex;
+}
+.container > .container-left {
+	display: flex;
+	flex-flow: column wrap;
+	width: 50%;
+	max-height: 100vh;
+	flex-flow: column nowrap;
+	color: black;
+	position: relative;
+	padding: 3rem;
+}
+.container > .container-left > .header {
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+.container > .container-left > .project-description {
+	font-weight: 300;
+	font-size: 1.5rem;
+	padding-right: 20%;
+	margin-bottom: 2rem;
+}
+.container > .container-left > .project-link,
+.project-link:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+.container > .container-left > .project-link:hover {
+	color: #977f6e;
+}
+.container > .container-left > .project-date {
+	position: absolute;
+	bottom: 2rem;
+}
+.container > .container-right {
+	width: 50%;
+}
+.date {
+	font-size: 1.5rem;
+}
+.image {
+	object-fit: cover;
+}
+.image-container {
+	width: max(20vw, 100%);
+	position: relative;
+	aspect-ratio: 0.9/1.2;
+	max-height: 100vh;
+}

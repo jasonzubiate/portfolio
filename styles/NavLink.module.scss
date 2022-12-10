@@ -1,0 +1,14 @@
+.active-circle {
+  width: .6rem;
+  height: .6rem;
+  background-color: royalblue;
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+}
+.label-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .5rem;
+}

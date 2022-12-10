@@ -1,0 +1,47 @@
+.container{
+  background-color: rgb(238, 232, 226);
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.container-padding {
+  padding: 4rem;
+}
+.project-links {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #252525;
+  position: relative;
+  gap: 2rem;
+}
+.project-links-padding {
+  padding: 4rem;
+}
+.h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.hidden-project {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .content {
+    padding: 2rem;
+  }
+  .project-links {
+    flex: wrap column;
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
