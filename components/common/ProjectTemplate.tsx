@@ -27,13 +27,15 @@ const ProjectTemplate = ({
 			>
 				<h1 className={styles.header}>{projectName}</h1>
 				<p className={styles["project-description"]}>{projectDescription}</p>
-				<Link
-					className={styles["project-link"]}
-					href={projectLink}
-					target="_blank"
-				>
-					Visit Project
-				</Link>
+				{projectLink !== "" ? (
+					<Link
+						className={styles["project-link"]}
+						href={projectLink}
+						target="_blank"
+					>
+						Visit Project
+					</Link>
+				) : null}
 				<label className={styles["project-date"]}>{projectDate}</label>
 			</div>
 			<div className={styles["container-right"]}>

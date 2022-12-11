@@ -11,7 +11,6 @@ import blockchainProjectCardImage from "public/img/blockchainProjectCardImage.pn
 import blockchainProjectImage from "public/img/blockchainProjectImage.png";
 import nutripairProjectCardImage from "public/img/nutripairProjectCardImage.png";
 import nutripairProjectImage from 'public/img/nutripairProjectImage.png'
-import pic from "public/img/pic.png"
 import { useImmer } from "use-immer";
 import ProjectTemplate from "../common/ProjectTemplate";
 import roof from "public/img/roof.jpg";
@@ -23,7 +22,7 @@ const Projects = () => {
 			date: "October 2022 - March 2023",
 			projectCardImage: hyfeProjectCardImage,
 			projectImage: hyfeProjectImage,
-			projectLink: 's',
+			projectLink: '',
 			colorTheme: "#FFFAE8",
 			value: false,
 			description:
@@ -34,7 +33,7 @@ const Projects = () => {
 			date: "November 2022",
 			projectCardImage: spotifyProjectCardImage,
 			projectImage: roof,
-			projectLink: 's',
+			projectLink: 'https://github.com/jasonzubiate/angular-spotify-browser',
 			colorTheme: "white",
 			value: false,
 			description:
@@ -44,8 +43,8 @@ const Projects = () => {
 			name: "Nutripair",
 			date: "April 2022 - September 2022",
 			projectCardImage: nutripairProjectCardImage,
-			projectImage: pic,
-			projectLink: 's',
+			projectImage: nutripairProjectImage,
+			projectLink: '',
 			colorTheme: "#adc698",
 			value: false,
 			description:

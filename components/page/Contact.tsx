@@ -4,8 +4,7 @@ import { useState } from "react";
 import styles from "../../styles/Contact.module.scss";
 import home from "public/img/newporthome.jpg";
 import Link from "next/link";
-import { BsLinkedin, BsInstagram } from "react-icons/bs";
-import { CgFileDocument } from "react-icons/cg";
+import { BsLinkedin, BsGithub, BsFileEarmarkText } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 
 const Result = () => {
@@ -107,11 +106,11 @@ const Contact = () => {
 							<Link href={"https://www.linkedin.com/in/jasonzubiate/"}>
 								<BsLinkedin size={"2rem"} color="black" />
 							</Link>
-							<Link href={"https://www.instagram.com/jason.zubiate/"}>
-								<BsInstagram size={"2rem"} color="black" />
+							<Link href={"https://github.com/jasonzubiate"}>
+								<BsGithub size={"2rem"} color="black" />
 							</Link>
 							<Link href="/assets/jasonzubiate.pdf" target="_blank">
-								<CgFileDocument size={"2.2rem"} color="black" />
+								<BsFileEarmarkText size={"2rem"} color="black" />
 							</Link>
 						</div>
 					</div>
