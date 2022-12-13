@@ -12,7 +12,7 @@ const About = () => {
 			<div className={`${styles.container} ${styles.right}`}>
 				<h1 className={styles.h1}>
 					I’m <span className="cadmlum-orange"> Jason</span>, an experienced
-					<div className={styles["slide-right"]}>software</div> developer.
+					<div className={styles["slide-right"]}>frontend</div> developer.
 				</h1>
 
 				<br />
