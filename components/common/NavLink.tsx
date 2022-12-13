@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "styles/NavLink.module.scss";
+import Link from "next/link";
 
 type NavlinkProps = {
 	linkName: string;
@@ -32,15 +33,15 @@ const Navlink = ({
 	};
 
 	return (
-		<a className="nav-link" href="#" onClick={() => changePage()}>
+		<Link className={styles['nav-link']} href="#" onClick={() => changePage()}>
 			<div className={styles["label-group"]}>
 				{selected ? <div className={styles["active-circle"]}></div> : null}
-				<h2 className="nav-link-label rubik-font">{linkName}</h2>
+				<h2 className={`${styles["nav-link-label"]} rubik-font`}>{linkName}</h2>
 			</div>
-			<div className="nav-link-image">
-				<Image className="img-card" src={linkImage} alt="picture" fill />
+			<div className={styles["nav-link-image"]}>
+				<Image className={styles["img-card"]} src={linkImage} alt="picture" fill />
 			</div>
-		</a>
+		</Link>
 	);
 };
 

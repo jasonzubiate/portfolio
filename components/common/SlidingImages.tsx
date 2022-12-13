@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "styles/SlidingImages.module.scss";
 
 // Images
@@ -16,12 +16,13 @@ import newYork from "public/img/newYork.jpg";
 import carbonara from "public/img/carbonara.jpg";
 import splashHouse from "public/img/splashHouse.jpg";
 import city from "public/img/city.jpg";
+import snowPatio from "public/img/snowPatio.jpg";
 
 const SlidingImages = () => {
 	return (
 		<div className={styles.container}>
 			<div
-				className={`${styles["container-split"]} ${styles["container-left"]}`}
+				className={styles["container-left"]}
 			>
 				<div className={styles["image-container-short"]}>
 					<Image
@@ -62,7 +63,7 @@ const SlidingImages = () => {
 				</div>
 			</div>
 			<div
-				className={`${styles["container-split"]} ${styles["container-right"]}`}
+				className={styles["container-right"]}
 			>
 				<div className={styles["image-container-long"]}>
 					<Image className={styles.image} src={bikelane} alt="picture" fill />
@@ -76,7 +77,7 @@ const SlidingImages = () => {
 					/>
 				</div>
 				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={boat} alt="picture" fill />
+					<Image className={styles.image} src={snowPatio} alt="picture" fill />
 				</div>
 				<div className={styles["image-container-long"]}>
 					<Image className={styles.image} src={boat} alt="picture" fill />

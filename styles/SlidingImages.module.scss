@@ -2,6 +2,9 @@
   width: 100%;
   display: flex;
   position: absolute;
+  // overflow-y: scroll;
+  // transition: height 3s linear;
+  animation: slide 290s linear 3s forwards;
 }
 @keyframes fadeIn {
 	from {
@@ -16,20 +19,20 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-84%);
+    transform: translateY(-100%);
   }
 }
-.container-split {
+.container-left {
   width: 50%;
   position: relative;
-}
-.container-left {
-  animation: shift-left 1s forwards;
+  animation: shift-container-left 1s forwards;
 }
 .container-right {
-  animation: shift-right 1s forwards;
+  width: 50%;
+  position: relative;
+  animation: shift-container-right 1s forwards;
 }
-@keyframes shift-left {
+@keyframes shift-container-left {
   from {
     transform: translateY(-2%);
   }
@@ -37,7 +40,7 @@
     transform: translateY(0);
   }
 }
-@keyframes shift-right {
+@keyframes shift-container-right {
   from {
     transform: translateY(2.2%);
     opacity: 0;
@@ -46,11 +49,6 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-.image {
-  object-fit: cover;
-  padding: 0rem 1.7rem 1.7rem 0rem;
-  animation: fadeIn 1s forwards;
 }
 .image-container-short{
   width: max(20vw, 100%);
@@ -62,9 +60,13 @@
 	position: relative;
 	aspect-ratio: .8/1.2;
 }
-
-@media screen and (min-width: 1024px) {
-  .container {
-    animation: slide 290s linear 3s forwards;
-  }
+.image {
+  object-fit: cover;
+  padding: 0rem 1.7rem 1.7rem 0rem;
+  animation: fadeIn 1s forwards;
 }
+// @media screen and (min-width: 1024px) {
+//   .container {
+//     animation: slide 290s linear 3s forwards;
+//   }
+// }
