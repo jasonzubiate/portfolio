@@ -7,7 +7,6 @@
 	flex-flow: column wrap;
 	width: 50%;
 	height: 100vh;
-	flex-flow: column nowrap;
 	color: black;
 	position: relative;
 	padding: 3rem;
@@ -53,4 +52,34 @@
 	position: relative;
 	aspect-ratio: 0.9/1.2;
 	height: 100vh;
+}
+
+@media screen and (max-width: 640px) {
+	.container {
+		flex-direction: column-reverse;
+		scroll-snap-type: y mandatory;
+	}
+	.container > .container-right {
+		width: 100vw;
+		// scroll-snap-align: start;
+	}
+	.container > .container-left {
+		width: 100vw;
+		padding: 3rem 2rem;
+		// scroll-snap-align: start;
+	}
+	.container > .container-left > .header {
+		font-size: 0.6rem;
+		margin: 1rem 0rem;
+	}
+	.container > .container-left > .project-description {
+		font-size: 0.8rem;
+		width: 100vw;
+	}
+	.container > .container-left > .project-link {
+		font-size: 0.7rem;
+	}
+	.container > .container-left > .project-date {
+		font-size: 0.8rem;
+	}
 }

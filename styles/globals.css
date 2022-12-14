@@ -82,6 +82,7 @@ main {
 	display: none;
 }
 #nav-toggle {
+	/* display: none; */
 	height: 5rem;
 	width: 5rem;
 	background-color: #977f6e;

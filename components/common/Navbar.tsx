@@ -18,6 +18,7 @@ const Navbar = ({
 	setCurrentPage,
 }: NavbarProps) => {
 	// renders all of the navlinks
+	// check the width of the window to determine which linkimage to send
 	const renderNavLinks = currentPage.map((page) => {
 		return (
 			<Navlink

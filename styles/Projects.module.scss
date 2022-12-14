@@ -35,13 +35,12 @@
   display: none;
 }
 @media screen and (max-width: 640px) {
-  .content {
+  .container-padding {
     padding: 2rem;
   }
   .project-links {
     flex: wrap column;
     padding: 1rem;
-    margin-top: 1.5rem;
   }
 }
 

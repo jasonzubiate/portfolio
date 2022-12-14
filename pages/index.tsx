@@ -15,18 +15,40 @@ import Navbar from "../components/common/Navbar";
 // Images
 import newport from "public/img/newport.jpg";
 import bikelane from "public/img/bikelane.jpg";
-import projectsPage from "public/img/projectspg.png"
+import projectsPage from "public/img/projectspg.png";
+import projectsPageMobile from "public/img/projectspgmbl.png";
 import contactPage from "public/img/contactpg.png";
+import contactPageMobile from "public/img/contactpgmbl.png";
 
 export default function Home() {
 	const [navToggle, setNavToggle] = useImmer(false);
 
 	// state for all of the pages
 	const [currentPage, setCurrentPage] = useImmer([
-		{ name: "Home", image: newport, value: true },
-		{ name: "About", image: bikelane, value: false },
-		{ name: "Projects", image: projectsPage, value: false },
-		{ name: "Contact", image: contactPage, value: false },
+		{
+			name: "Home",
+			image: newport,
+			mobileImage: projectsPageMobile,
+			value: true,
+		},
+		{
+			name: "About",
+			image: bikelane,
+			mobileImage: projectsPageMobile,
+			value: false,
+		},
+		{
+			name: "Projects",
+			image: projectsPage,
+			mobileImage: projectsPageMobile,
+			value: false,
+		},
+		{
+			name: "Contact",
+			image: contactPage,
+			mobileImage: contactPageMobile,
+			value: false,
+		},
 	]);
 
 	// determines which page will render based on the currentPage state

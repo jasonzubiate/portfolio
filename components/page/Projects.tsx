@@ -75,7 +75,7 @@ const Projects = () => {
 		{
 			name: "Blockchain Technology Integration",
 			date: "April 2022 - June 2022",
-			projectCardImage: blockchainProjectCardImage,
+			projectCardImage: blockchainProjectCardImage, 
 			projectImage: blockchainProjectImage,
 			projectLink: '/assets/blockchainReport.pdf',
 			colorTheme: "white",
