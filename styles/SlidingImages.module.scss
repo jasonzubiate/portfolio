@@ -25,12 +25,12 @@
 .container-left {
   width: 50%;
   position: relative;
-  animation: shift-container-left 1s forwards;
+  animation: shift-container-left 1.2s forwards;
 }
 .container-right {
   width: 50%;
   position: relative;
-  animation: shift-container-right 1s forwards;
+  animation: shift-container-right 1.2s forwards;
 }
 @keyframes shift-container-left {
   from {

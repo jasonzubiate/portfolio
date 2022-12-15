@@ -6,6 +6,17 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/* FONT IMPORT */
+@font-face {
+	font-family: "Vasquz";
+	src: url("../public/assets/fonts/Vasquz/Vasquz.otf");
+}
+@font-face {
+	font-family: "Suisse";
+	src: url("../public/assets/fonts/Suisse/SuisseBP-Regular.otf");
+}
+
 body,
 main {
 	height: 100vh;
@@ -158,4 +169,4 @@ main {
 		width: 4rem;
 		bottom: 2rem;
 	}
-} 
+}

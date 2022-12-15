@@ -37,6 +37,7 @@
 .nav-link > .nav-link-image > .img-card {
 	border-radius: 0.4rem;
 	object-fit: cover;
+	object-position: top;
 }
 
 @media screen and (max-width: 640px) {

@@ -19,7 +19,7 @@ const About = () => {
 
 				<p className={styles.p}>
 					I am a fourth-year informatics major at the University of California,
-					Irvine with a specialization in
+					Irvine specializing in
 					<span className={`${styles.highlight} burnt-umber`}>
 						{" "}
 						human-computer interaction
@@ -31,13 +31,12 @@ const About = () => {
 
 				<p className={styles.p}>
 					Originally a computer science major, I began taking software design
-					courses and soon found passion in exploring the{" "}
+					courses and soon found a passion for exploring the{" "}
 					<span className={`${styles.highlight} burnt-umber`}>
 						user-centered design process
 					</span>
-					. I have also used my previous experience in object-oriented
-					programming to becoming a front-end developer to bring my ideas to
-					life.
+					. I have since combined these skills throughout my front-end
+					development journey.
 				</p>
 
 				<br />
@@ -47,28 +46,27 @@ const About = () => {
 					<span className={`${styles.highlight} burnt-umber`}>
 						user-experience designer
 					</span>{" "}
-					and create applications that have beneficial impacts on society.
+					and creating applications that bring incredible benefits to society.
 				</p>
 
 				<br />
 
 				<p className={styles.p}>
 					Being from California, I love to visit the beach during the summer and
-					stay active outdoors. I workout often to keep myself fit and watch
-					different sports throughout the year.
+					stay active outdoors. I work out often to keep myself fit and enjoy
+					cooking new meals in the kitchen.
 				</p>
 
 				<br />
 
 				<p className={styles.p}>
-					I also have a hobby of{" "}
+					Over the past year, I also have dove into{" "}
 					<span className={`${styles.highlight} burnt-umber`}>
-						producing EDM music
-					</span>
-					. Over the past year I have slowly dove into the area of music
-					production and it is a fascinating challenge that I wish to continue
-					exploring. I want to produce dance music that keeps people moving and
-					brings joy to those they are with.
+						music production
+					</span>{" "}
+					and electronic dance music. It has since been a fascinating challenge
+					that I wish to continue exploring. I want to produce dance music that
+					keeps people moving and brings positive energy.
 				</p>
 			</div>
 		</div>

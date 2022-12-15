@@ -39,7 +39,7 @@ const Navlink = ({
 				<h2 className={`${styles["nav-link-label"]} rubik-font`}>{linkName}</h2>
 			</div>
 			<div className={styles["nav-link-image"]}>
-				<Image className={styles["img-card"]} src={linkImage} alt="picture" fill />
+				<Image className={styles["img-card"]} src={linkImage} alt={linkName} fill />
 			</div>
 		</Link>
 	);

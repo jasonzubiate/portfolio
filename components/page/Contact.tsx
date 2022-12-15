@@ -109,7 +109,7 @@ const Contact = () => {
 							<Link href={"https://github.com/jasonzubiate"}>
 								<BsGithub size={"2rem"} color="black" />
 							</Link>
-							<Link href="/assets/jasonzubiate.pdf" target="_blank">
+							<Link href="/assets/docs/jasonzubiate.pdf" target="_blank">
 								<BsFileEarmarkText size={"2rem"} color="black" />
 							</Link>
 						</div>

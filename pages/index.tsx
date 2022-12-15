@@ -13,8 +13,8 @@ import Contact from "../components/page/Contact";
 import Navbar from "../components/common/Navbar";
 
 // Images
-import newport from "public/img/newport.jpg";
-import bikelane from "public/img/bikelane.jpg";
+import homePage from "public/img/homepg.png";
+import aboutPage from "public/img/aboutpg.png";
 import projectsPage from "public/img/projectspg.png";
 import projectsPageMobile from "public/img/projectspgmbl.png";
 import contactPage from "public/img/contactpg.png";
@@ -27,13 +27,13 @@ export default function Home() {
 	const [currentPage, setCurrentPage] = useImmer([
 		{
 			name: "Home",
-			image: newport,
+			image: homePage,
 			mobileImage: projectsPageMobile,
 			value: true,
 		},
 		{
 			name: "About",
-			image: bikelane,
+			image: aboutPage,
 			mobileImage: projectsPageMobile,
 			value: false,
 		},

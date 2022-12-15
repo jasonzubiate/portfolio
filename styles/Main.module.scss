@@ -6,6 +6,7 @@
 	background-position: center;
 }
 .content {
+	width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,17 +15,26 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
   color: #000000;
+	line-height: 2rem;
 }
 .name {
-	font-size: 2.75rem;
+	font-family: "Vasquz";
+	// Poppins fontsize
+	// font-size: 2.75rem;
+	font-size: 3rem;
 }
 .profession {
+	// font-family: "Suisse";
+	// font-weight: 500;
 	font-size: 1rem;
 }
 
 @media screen and (max-width: 640px){
+	.content {
+		line-height: 1.5rem;
+	}
   .name {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	.profession {
 		font-size: 0.8rem;

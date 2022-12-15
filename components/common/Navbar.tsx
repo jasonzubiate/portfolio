@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "styles/Navbar.module.scss";
 
-// Components
+// HOOKS
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+
+// COMPONENTS
 import Navlink from "./NavLink";
 
 type NavbarProps = {
@@ -17,13 +20,14 @@ const Navbar = ({
 	currentPage,
 	setCurrentPage,
 }: NavbarProps) => {
+	const {width, height} = useWindowDimensions();
+
 	// renders all of the navlinks
-	// check the width of the window to determine which linkimage to send
 	const renderNavLinks = currentPage.map((page) => {
 		return (
 			<Navlink
 				linkName={page.name}
-				linkImage={page.image}
+				linkImage={width > 640 ? page.image : page.mobileImage}
 				setNavToggle={setNavToggle}
 				selected={page.value}
 				setCurrentPage={setCurrentPage}
