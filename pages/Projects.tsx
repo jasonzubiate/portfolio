@@ -135,7 +135,6 @@ const Projects = () => {
 
 	return (
 		<div className={`${styles.container} fade-in`}>
-			{/* Have the styles.container-padding conditionally rendered so we can get the padding effect that we want based on whether a project is selected */}
 			<div
 				className={`${
 					!isProjectSelected() ? `${styles["container-padding"]}` : ""

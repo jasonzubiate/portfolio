@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { useState } from "react";
 import styles from "../../styles/Contact.module.scss";
 import home from "public/img/newporthome.jpg";

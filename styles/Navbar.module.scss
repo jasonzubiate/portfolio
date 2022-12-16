@@ -1,6 +1,52 @@
+// UTILITIES
 .shifted-nav-links {
 	transform: translateY(0%) scale(1);
 }
 .unshifted-nav-links {
 	transform: translateY(70%) scale(0.9);
+}
+
+#nav {
+	height: 50vh;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: 1;
+	overflow: hidden;
+}
+#nav-links {
+	display: flex;
+	justify-content: center;
+	gap: clamp(2rem, 2vw, 1.5rem);
+	margin-top: clamp(2rem, 2vw, 3rem);
+	padding: 0rem clamp(1rem, 2vw, 2rem);
+	transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+#nav-links::-webkit-scrollbar {
+	display: none;
+}
+@media screen and (max-width: 1700px) {
+	#nav-links {
+		justify-content: flex-start;
+	}
+}
+@media screen and (max-width: 640px) {
+	#nav-links {
+		gap: clamp(1rem, 2vw, 2rem);
+	}
+}
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+	#nav {
+		height: 100vh;
+	}
+	#nav-toggle {
+		height: 4rem;
+		width: 4rem;
+		bottom: 2rem;
+	}
 }

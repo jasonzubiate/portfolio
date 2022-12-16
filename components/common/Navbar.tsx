@@ -35,9 +35,9 @@ const Navbar = ({
 		);
 	});
 	return (
-		<nav id="nav">
+		<nav id={styles.nav}>
 			<div
-				id="nav-links"
+				id={styles["nav-links"]}
 				className={`${
 					navToggle
 						? styles["shifted-nav-links"]

@@ -1,17 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+/* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap");
-/* CSS RESET */
+
+@font-face {
+	font-family: "Vasquz";
+	src: url("../public/assets/fonts/Vasquz/Vasquz.otf");
+}
+
+/* RESET */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* FONT IMPORT */
-@font-face {
-	font-family: "Vasquz";
-	src: url("../public/assets/fonts/Vasquz/Vasquz.otf");
+/* UTILITIES */
+.rubik-font {
+	font-family: "Rubik", sans-serif;
+}
+.shifted-main {
+	transform: translateY(-50%);
+}
+.fade-in {
+	animation: fadeInPage 1.5s;
+}
+@keyframes fadeInPage {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* COLORS */
+.cadmlum-orange {
+	color: #f28c28;
+}
+.burnt-umber {
+	color: #6e260e;
+}
+.coffe-brown {
+	color: #6f4e37;
 }
 
 body,
@@ -28,66 +57,6 @@ main {
 	transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
 	overflow-y: auto;
 	font-family: "Sora", sans-serif;
-}
-
-/* UTILITIES */
-.rubik-font {
-	font-family: "Rubik", sans-serif;
-}
-.shifted-main {
-	transform: translateY(-50%);
-}
-.img-card {
-	border-radius: 0.4rem;
-	object-fit: cover;
-}
-.fade-in {
-	animation: fadeInPage 1.5s;
-}
-
-/* COLORS */
-.cadmlum-orange {
-	color: #f28c28;
-}
-.burnt-umber {
-	color: #6e260e;
-}
-.coffe-brown {
-	color: #6f4e37;
-}
-
-@keyframes fadeInPage {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-#nav {
-	height: 50vh;
-	width: 100%;
-	position: absolute;
-	left: 0px;
-	bottom: 0px;
-	z-index: 1;
-	overflow: hidden;
-}
-#nav-links {
-	display: flex;
-	justify-content: center;
-	gap: clamp(2rem, 2vw, 1.5rem);
-	margin-top: clamp(2rem, 2vw, 3rem);
-	padding: 0rem clamp(1rem, 2vw, 2rem);
-	transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
-	overflow-x: scroll;
-	overflow-y: hidden;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-}
-#nav-links::-webkit-scrollbar {
-	display: none;
 }
 #nav-toggle {
 	/* display: none; */
@@ -132,18 +101,13 @@ main {
 	opacity: 1;
 	transform: translate(-50%, -50%) scale(1);
 }
-
-@media screen and (max-width: 1700px) {
-	#nav-links {
-		justify-content: flex-start;
-	}
+.img-card {
+	border-radius: 0.4rem;
+	object-fit: cover;
 }
 
 /* MOBILE DEVICE */
 @media screen and (max-width: 640px) {
-	#nav-links {
-		gap: clamp(1rem, 2vw, 2rem);
-	}
 	#nav-toggle {
 		height: 4rem;
 		width: 4rem;
@@ -157,13 +121,5 @@ main {
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
 	.shifted-main {
 		transform: translateY(-100%);
-	}
-	#nav {
-		height: 100vh;
-	}
-	#nav-toggle {
-		height: 4rem;
-		width: 4rem;
-		bottom: 2rem;
 	}
 }
