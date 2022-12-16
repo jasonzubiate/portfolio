@@ -22,21 +22,28 @@ import city from "public/img/city.jpg";
 import snowPatio from "public/img/snowPatio.jpg";
 
 const SlidingImages = () => {
+	// Create a ref to the div element
 	const containerRef = useRef(null);
-	const {width, height} = useWindowDimensions();
 
 	useEffect(() => {
+		// Get the current scroll position
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+		// Get the height of the div element
 		const divHeight = containerRef.current.offsetHeight;
-		const windowHeight = height
-		const outOfScreenHeight = divHeight - windowHeight;
-		console.log(outOfScreenHeight)
 
-    // Calculate the amount to translate the div so that its bottom edge reaches the bottom of the screen
-    const translateY = outOfScreenHeight * -1;
+		// Get the height of the viewport
+		const viewportHeight = window.innerHeight;
 
-    // Apply the CSS transform to the div
-    containerRef.current.style.transform = `translateY(${translateY}px)`;
-  }, []);
+		// Calculate the distance from the bottom of the div to the bottom of the viewport
+		const distanceFromBottom =
+			divHeight + containerRef.current.offsetTop - scrollTop - viewportHeight;
+
+		// If the distance from the bottom is greater than 0, slide the div up by the distance
+		if (distanceFromBottom > 0) {
+			containerRef.current.style.transform = `translateY(-${distanceFromBottom}px)`;
+		}
+	}, []);
 
 	return (
 		<div className={styles.container} ref={containerRef}>

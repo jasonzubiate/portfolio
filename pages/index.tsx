@@ -92,14 +92,6 @@ export default function Home() {
 
 			<main className={`${navToggle ? "shifted-main" : ""}`}>{renderPage}</main>
 
-			{/* navbar with all navlinks for the different sections of the page */}
-			<Navbar
-				navToggle={navToggle}
-				setNavToggle={setNavToggle}
-				currentPage={currentPage}
-				setCurrentPage={setCurrentPage}
-			/>
-
 			{/* button used to change the navToggle state */}
 			<button
 				id="nav-toggle"
@@ -113,6 +105,14 @@ export default function Home() {
 					<IoClose size="3x" color="whitesmoke" />
 				</i>
 			</button>
+
+			{/* navbar with all navlinks for the different sections of the page */}
+			<Navbar
+				navToggle={navToggle}
+				setNavToggle={setNavToggle}
+				currentPage={currentPage}
+				setCurrentPage={setCurrentPage}
+			/>
 		</div>
 	);
 }

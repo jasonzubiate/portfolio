@@ -1,5 +1,5 @@
-import styles from "styles/Projects.module.scss";
-import ProjectCard from "../common/ProjectCard";
+import styles from "../styles/Projects.module.scss";
+import ProjectCard from "../components/common/ProjectCard";
 import hyfeProjectCardImage from "public/img/hyfeProjectCardImage.png";
 import hyfeProjectImage from "public/img/hyfeProjectImage.png";
 import spotifyProjectCardImage from "public/img/spotifyProjectCardImage.png";
@@ -12,7 +12,7 @@ import blockchainProjectImage from "public/img/blockchainProjectImage.png";
 import nutripairProjectCardImage from "public/img/nutripairProjectCardImage.png";
 import nutripairProjectImage from "public/img/nutripairProjectImage.png";
 import { useImmer } from "use-immer";
-import ProjectTemplate from "../common/ProjectTemplate";
+import ProjectTemplate from "../components/common/ProjectTemplate";
 import roof from "public/img/roof.jpg";
 
 const Projects = () => {

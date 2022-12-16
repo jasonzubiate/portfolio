@@ -2,10 +2,12 @@
   width: 100%;
   display: flex;
   position: absolute;
-  transition: transform 5s linear;
-  // overflow-y: scroll;
-  // transition: height 3s linear;
-  animation: slide 290s linear 3s forwards;
+  overflow-y: scroll;
+  transition: transform  290s linear 3s;
+  // animation: slide 290s linear 3s forwards;
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 @keyframes fadeIn {
 	from {
