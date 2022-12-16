@@ -2,7 +2,10 @@ import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 import styles from "styles/SlidingImages.module.scss";
 
-// Images
+// HOOKS
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+
+// IMAGES
 import bikelane from "public/img/bikelane.jpg";
 import hollywoodSign from "public/img/hollywoodsign.jpg";
 import laDroguire from "public/img/ladroguerie.jpg";
@@ -19,11 +22,25 @@ import city from "public/img/city.jpg";
 import snowPatio from "public/img/snowPatio.jpg";
 
 const SlidingImages = () => {
+	const containerRef = useRef(null);
+	const {width, height} = useWindowDimensions();
+
+	useEffect(() => {
+		const divHeight = containerRef.current.offsetHeight;
+		const windowHeight = height
+		const outOfScreenHeight = divHeight - windowHeight;
+		console.log(outOfScreenHeight)
+
+    // Calculate the amount to translate the div so that its bottom edge reaches the bottom of the screen
+    const translateY = outOfScreenHeight * -1;
+
+    // Apply the CSS transform to the div
+    containerRef.current.style.transform = `translateY(${translateY}px)`;
+  }, []);
+
 	return (
-		<div className={styles.container}>
-			<div
-				className={styles["container-left"]}
-			>
+		<div className={styles.container} ref={containerRef}>
+			<div className={styles["container-left"]}>
 				<div className={styles["image-container-short"]}>
 					<Image
 						className={styles.image}
@@ -62,9 +79,7 @@ const SlidingImages = () => {
 					<Image className={styles.image} src={beamers} alt="picture" fill />
 				</div>
 			</div>
-			<div
-				className={styles["container-right"]}
-			>
+			<div className={styles["container-right"]}>
 				<div className={styles["image-container-long"]}>
 					<Image className={styles.image} src={bikelane} alt="picture" fill />
 				</div>

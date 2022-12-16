@@ -82,7 +82,7 @@ const Contact = () => {
 							<button className={styles.btn}>Submit</button>
 						</div>
 						<div className={styles["message-sent"]}>
-							{submitted ? <Result /> : null}
+							{submitted && <Result />}
 						</div>
 					</form>
 					<div className={styles["misc-content"]}>
