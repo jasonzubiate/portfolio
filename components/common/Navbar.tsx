@@ -7,9 +7,11 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 // COMPONENTS
 import Navlink from "./NavLink";
 
-// Images
+// IMAGES
 import homePage from "public/img/homepg.png";
+import homePageMobile from "public/img/homepgmbl.png";
 import aboutPage from "public/img/aboutpg.png";
+import aboutPageMobile from "public/img/aboutpgmbl.png";
 import projectsPage from "public/img/projectspg.png";
 import projectsPageMobile from "public/img/projectspgmbl.png";
 import contactPage from "public/img/contactpg.png";
@@ -27,13 +29,13 @@ const Navbar = ({ navToggle, setNavToggle }: NavbarProps) => {
 		{
 			name: "Home",
 			image: homePage,
-			mobileImage: projectsPageMobile,
+			mobileImage: homePageMobile,
 			selected: true,
 		},
 		{
 			name: "About",
 			image: aboutPage,
-			mobileImage: projectsPageMobile,
+			mobileImage: aboutPageMobile,
 			selected: false,
 		},
 		{
