@@ -3,6 +3,7 @@ import ProjectCard from "../components/common/ProjectCard";
 import hyfeProjectCardImage from "public/img/hyfeProjectCardImage.png";
 import hyfeProjectImage from "public/img/hyfeProjectImage.png";
 import spotifyProjectCardImage from "public/img/spotifyProjectCardImage.png";
+import spotifyProjectImage from "public/img/spotifyProjectImage.jpeg";
 import awProjectCardImage from "public/img/awProjectCardImage.png";
 import awProjectImage from "public/img/awProjectImage.png";
 import uxProjectCardImage from "public/img/uxProjectCardImage.png";
@@ -34,7 +35,7 @@ const Projects = () => {
 			name: "Angular Spotify Browser",
 			date: "November 2022",
 			projectCardImage: spotifyProjectCardImage,
-			projectImage: roof,
+			projectImage: spotifyProjectImage,
 			projectLink: "https://github.com/jasonzubiate/angular-spotify-browser",
 			colorTheme: "white",
 			value: false,
