@@ -141,7 +141,7 @@ const Projects = () => {
 				}`}
 			>
 				{!isProjectSelected() ? (
-					<div className={styles.h1}>Projects</div>
+					<h1 className={styles.h1}>Projects</h1>
 				) : null}
 				<div
 					className={`${styles["project-links"]} ${

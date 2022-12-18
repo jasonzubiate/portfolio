@@ -3,6 +3,7 @@
 	width: 100vw;
 	display: flex;
 	overflow-y: auto;
+	background-color: #f1efe7;
 }
 .container::-webkit-scrollbar {
 	display: none;
@@ -32,19 +33,10 @@
 }
 .h1 {
 	font-family: "Vasquz";
-	// width for Poppins
-	// width: 50%;
-	// width for Vasquz
 	width: 55%;
-	// fontsize for poppins
-	// font-size: 4rem;
-	// fontsize for Vasquz
 	font-size: 4.5rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	// line height for poppins
-	line-height: 3.2rem;
-	// line height for Vasquz
 	line-height: 3.8rem;
 	margin: 8rem 0;
 }
@@ -64,14 +56,10 @@
 	}
 }
 .p {
-	// font-family: "Suisse";
 	align-self: flex-end;
 	width: 60%;
 	padding-right: 2rem;
-	// fontsize for Poppins
 	font-size: 1.3rem;
-	// fontsize for Vasquz
-	// font-size: 1.6rem;
 	font-weight: 300;
 }
 .highlight {

@@ -22,9 +22,10 @@ const Navlink = ({
 		setCurrentPage((draft) => {
 			draft.map((page) => {
 				if (page.name == linkName) {
-					draft[draft.findIndex(({ name }) => name === linkName)].value = true;
+					draft[draft.findIndex(({ name }) => name === linkName)].selected =
+						true;
 				} else {
-					draft[draft.findIndex(({ name }) => name === page.name)].value =
+					draft[draft.findIndex(({ name }) => name === page.name)].selected =
 						false;
 				}
 			});
@@ -33,13 +34,22 @@ const Navlink = ({
 	};
 
 	return (
-		<Link className={styles['nav-link']} href="#" onClick={() => changePage()}>
+		<Link
+			className={styles["nav-link"]}
+			href={`/${linkName}`}
+			onClick={() => changePage()}
+		>
 			<div className={styles["label-group"]}>
 				{selected ? <div className={styles["active-circle"]}></div> : null}
 				<h2 className={`${styles["nav-link-label"]} rubik-font`}>{linkName}</h2>
 			</div>
 			<div className={styles["nav-link-image"]}>
-				<Image className={styles["img-card"]} src={linkImage} alt={linkName} fill />
+				<Image
+					className={styles["img-card"]}
+					src={linkImage}
+					alt={linkName}
+					fill
+				/>
 			</div>
 		</Link>
 	);

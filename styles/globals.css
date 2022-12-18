@@ -48,6 +48,7 @@ main {
 	height: 100vh;
 	width: 100vw;
 	background-color: black;
+	font-family: "Sora", sans-serif;
 }
 main {
 	background-color: #f1efe7;
@@ -56,7 +57,6 @@ main {
 	/* transition: property duration timing-functinon delay */
 	transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
 	overflow-y: auto;
-	font-family: "Sora", sans-serif;
 }
 #nav-toggle {
 	/* display: none; */
