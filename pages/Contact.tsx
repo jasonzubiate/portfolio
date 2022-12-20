@@ -53,7 +53,7 @@ const Contact = () => {
 		<div className={`${styles.container} fade-in`}>
 			<div className={styles["container-left"]}>
 				<div className={styles["image-container"]}>
-					<Image className={styles.image} src={home} alt="picture" fill />
+					<Image className={styles.image} src={home} alt="picture" fill quality={100} priority/>
 				</div>
 			</div>
 			<div className={styles["container-right"]}>

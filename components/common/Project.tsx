@@ -82,6 +82,8 @@ const Project = ({
 						src={projectImage}
 						alt="picture"
 						fill
+						quality={100}
+						priority
 					/>
 				</div>
 			</div>

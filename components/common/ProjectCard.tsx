@@ -19,7 +19,7 @@ const ProjectCard = ({
 			<h2 className={styles["project-link-label"]}>{projectName}</h2>
 			<p className={styles["project-link-date"]}>{projectDate}</p>
 			<div className={styles["project-link-image"]}>
-				<Image className="img-card" src={projectImage} alt={projectName} fill />
+				<Image className="img-card" src={projectImage} alt={projectName} fill quality={100} priority/>
 			</div>
 		</Link>
 	);

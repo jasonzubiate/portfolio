@@ -54,6 +54,7 @@ const SlidingImages = () => {
 						src={hollywoodSign}
 						alt="picture"
 						fill
+						priority
 					/>
 				</div>
 				<div className={styles["image-container-short"]}>
@@ -62,6 +63,7 @@ const SlidingImages = () => {
 						src={splashHouse}
 						alt="picture"
 						fill
+						priority
 					/>
 				</div>
 				<div className={styles["image-container-short"]}>

@@ -32,7 +32,7 @@
 		"link": "",
 		"colorTheme": "#adc698",
 		"value": false,
-		"description": "Thirty-two million Americans live with food intolerance. Nutripair is a nutritional health management application committed to helping individuals create simple, sustainable, and long-term dietary lifestyle changes to prevent and mitigate chronic illness.",
+		"description": "Thirty-two million Americans live with food intolerance. Nutripair is a nutritional health management application committed to helping individuals create simple, sustainable, and long-term dietary lifestyle changes to prevent and mitigate chronic illness. The work done for this project is protected by a NDA. Please contact me directly for more information about the project.",
 		"roles": ["Frontend Developer", "UX/UI Designer"],
 		"tools": ["React", "Next.js", "Figma"]
 	},

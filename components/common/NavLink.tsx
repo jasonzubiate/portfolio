@@ -36,7 +36,7 @@ const Navlink = ({
 	return (
 		<Link
 			className={styles["nav-link"]}
-			href={`/${linkName}`}
+			href={linkName != "Home" ? `/${linkName}` : "/#"}
 			onClick={() => changePage()}
 		>
 			<div className={styles["label-group"]}>
@@ -49,6 +49,7 @@ const Navlink = ({
 					src={linkImage}
 					alt={linkName}
 					fill
+					quality={100}
 				/>
 			</div>
 		</Link>
