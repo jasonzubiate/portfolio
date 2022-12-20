@@ -6,7 +6,11 @@ import Navbar from "./Navbar";
 import { CgMenuMotion } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 
-const Layout = ({ children }) => {
+type LayoutProps = {
+	children:any
+};
+
+const Layout = ({ children }: LayoutProps) => {
 	const [navToggle, setNavToggle] = useImmer(false);
 
 	return (
