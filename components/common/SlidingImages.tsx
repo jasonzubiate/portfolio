@@ -2,9 +2,6 @@ import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 import styles from "styles/SlidingImages.module.scss";
 
-// HOOKS
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-
 // IMAGES
 import bikelane from "public/img/bikelane.jpg";
 import hollywoodSign from "public/img/hollywoodsign.jpg";
