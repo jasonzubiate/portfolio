@@ -3,24 +3,47 @@ import React, { useRef, useEffect } from "react";
 import styles from "styles/SlidingImages.module.scss";
 
 // IMAGES
-import bikelane from "public/img/bikelane.jpg";
 import hollywoodSign from "public/img/hollywoodsign.jpg";
+import bikelane from "public/img/bikelane.jpg";
+import palmSprings from "public/img/palmsprings.jpg"
+import yankeeStadium from "public/img/yankees.jpg";
+import pool from "public/img/pool.jpg";
+import laMaison from "public/img/lamaison.jpg";
+import snowPatio from "public/img/snowPatio.jpg";
 import laDroguire from "public/img/ladroguerie.jpg";
 import beamers from "public/img/beamers.jpg";
 import boat from "public/img/boat.jpg";
 import bridge from "public/img/bridge.jpg";
-import laMaison from "public/img/lamaison.jpg";
-import yankeeStadium from "public/img/yankees.jpg";
-import pool from "public/img/pool.jpg";
 import newYork from "public/img/newYork.jpg";
 import carbonara from "public/img/carbonara.jpg";
 import splashHouse from "public/img/splashHouse.jpg";
 import city from "public/img/city.jpg";
-import snowPatio from "public/img/snowPatio.jpg";
+import club from "public/img/club.jpg"
+import redStreet from "public/img/redstreet.jpg"
 
 const SlidingImages = () => {
 	// Create a ref to the div element
-	const containerRef:any = useRef();
+	const containerRef: any = useRef();
+
+	const images = [
+		hollywoodSign,
+		bikelane,
+		palmSprings,
+		yankeeStadium,
+		pool,
+		snowPatio,
+		laMaison,
+		boat,
+		newYork,
+		carbonara,
+		city,
+		laDroguire,
+		beamers,
+		splashHouse,
+		club,
+		bridge,
+		redStreet,
+	];
 
 	useEffect(() => {
 		// Get the current scroll position
@@ -45,76 +68,42 @@ const SlidingImages = () => {
 	return (
 		<div className={styles.container} ref={containerRef}>
 			<div className={styles["container-left"]}>
-				<div className={styles["image-container-short"]}>
-					<Image
-						className={styles.image}
-						src={hollywoodSign}
-						alt="picture"
-						fill
-						priority
-					/>
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image
-						className={styles.image}
-						src={splashHouse}
-						alt="picture"
-						fill
-						priority
-					/>
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={pool} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={city} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={newYork} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={laMaison} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={beamers} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={pool} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-short"]}>
-					<Image className={styles.image} src={beamers} alt="picture" fill />
-				</div>
+				{images
+					.filter((image: any) => {
+						return images.indexOf(image) % 2 == 0;
+					})
+					.map((image: any) => {
+						return (
+							<div className={styles["image-container-short"]}>
+								<Image
+									className={styles.image}
+									src={image}
+									alt="picture"
+									fill
+									priority
+								/>
+							</div>
+						);
+					})}
 			</div>
 			<div className={styles["container-right"]}>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={bikelane} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image
-						className={styles.image}
-						src={yankeeStadium}
-						alt="picture"
-						fill
-					/>
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={snowPatio} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={boat} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={carbonara} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={laDroguire} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={laDroguire} alt="picture" fill />
-				</div>
-				<div className={styles["image-container-long"]}>
-					<Image className={styles.image} src={bridge} alt="picture" fill />
-				</div>
+			{images
+					.filter((image: any) => {
+						return images.indexOf(image) % 2 == 1;
+					})
+					.map((image: any) => {
+						return (
+							<div className={styles["image-container-long"]}>
+								<Image
+									className={styles.image}
+									src={image}
+									alt="picture"
+									fill
+									priority
+								/>
+							</div>
+						);
+					})}
 			</div>
 		</div>
 	);
