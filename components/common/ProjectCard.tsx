@@ -7,31 +7,13 @@ type ProjectCardProps = {
 	projectName: string;
 	projectDate: string;
 	projectImage: any;
-	// setCurrentProject: any;
 };
 
 const ProjectCard = ({
 	projectName,
 	projectDate,
 	projectImage,
-}: // setCurrentProject,
-ProjectCardProps) => {
-
-	
-	// const expandProject = () => {
-	// 	setCurrentProject((draft) => {
-	// 		draft.map((project) => {
-	// 			if (project.name == projectName) {
-	// 				draft[draft.findIndex(({ name }) => name === projectName)].value =
-	// 					true;
-	// 			} else {
-	// 				draft[draft.findIndex(({ name }) => name === project.name)].value =
-	// 					false;
-	// 			}
-	// 		});
-	// 	});
-	// };
-
+}: ProjectCardProps) => {
 	return (
 		<Link className={styles["project-link"]} href={`/Projects/${projectName}`}>
 			<h2 className={styles["project-link-label"]}>{projectName}</h2>
