@@ -9,7 +9,7 @@ import palmSprings from "public/img/palmsprings.jpg"
 import yankeeStadium from "public/img/yankees.jpg";
 import pool from "public/img/pool.jpg";
 import laMaison from "public/img/lamaison.jpg";
-import snowPatio from "public/img/snowPatio.jpg";
+import snowPatio from "public/img/snowpatio.jpg";
 import laDroguire from "public/img/ladroguerie.jpg";
 import beamers from "public/img/beamers.jpg";
 import boat from "public/img/boat.jpg";
