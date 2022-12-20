@@ -54,9 +54,6 @@
 .container > .container-right {
 	width: 50%;
 }
-.date {
-	font-size: 1.5rem;
-}
 .image {
 	object-fit: cover;
 }
@@ -66,7 +63,25 @@
 	aspect-ratio: 0.9/1.2;
 	height: 100vh;
 }
-
+@media screen and (max-width: 820px) {
+	.container > .container-left > .header {
+		font-size: 0.8rem;
+		margin: 1rem 0rem;
+	}
+	.container > .container-left > .project-description {
+		font-size: 1.2rem;
+		padding-right: 10%;
+	}
+	.container > .container-left > .project-link {
+		font-size: 1rem;
+	}
+	.container > .container-left > .additional-info {
+		width: 75%;
+		bottom: 9rem;
+		font-size: .7rem;
+		gap: 2rem;
+	}
+}
 @media screen and (max-width: 640px) {
 	.container {
 		flex-direction: column-reverse;
@@ -92,12 +107,9 @@
 	.container > .container-left > .project-link {
 		font-size: 0.7rem;
 	}
-	.container > .container-left > .project-date {
-		font-size: 0.8rem;
-	}
 	.container > .container-left > .additional-info {
 		width: 100%;
-		bottom: 10rem;
+		bottom: 9rem;
 		font-size: .6rem;
 	}
 }
