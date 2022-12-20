@@ -63,7 +63,26 @@
 	aspect-ratio: 0.9/1.2;
 	height: 100vh;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
+	.container > .container-left > .header {
+		font-size: 0.7rem;
+		margin: 1rem 0rem;
+	}
+	.container > .container-left > .project-description {
+		font-size: 1rem;
+		padding-right: 10%;
+	}
+	.container > .container-left > .project-link {
+		font-size: .8rem;
+	}
+	.container > .container-left > .additional-info {
+		width: 75%;
+		bottom: 3rem;
+		font-size: 0.7rem;
+		gap: 2rem;
+	}
+}
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
 	.container > .container-left > .header {
 		font-size: 0.8rem;
 		margin: 1rem 0rem;
@@ -79,6 +98,25 @@
 		width: 75%;
 		bottom: 9rem;
 		font-size: 0.7rem;
+		gap: 2rem;
+	}
+}
+@media screen and (max-width:820px) {
+	.container > .container-left > .header {
+		font-size: 0.6rem;
+		margin: 1rem 0rem;
+	}
+	.container > .container-left > .project-description {
+		font-size: .8rem;
+		padding-right: 10%;
+	}
+	.container > .container-left > .project-link {
+		font-size: .7rem;
+	}
+	.container > .container-left > .additional-info {
+		width: 70%;
+		bottom: 5rem;
+		font-size: 0.6rem;
 		gap: 2rem;
 	}
 }
