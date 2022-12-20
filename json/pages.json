@@ -1,0 +1,28 @@
+{
+	"pages": [
+		{
+			"name": "Home",
+			"image": "public/img/homepg.png",
+			"mobileImage": "public/img/homepgmbl.png",
+			"selected": true
+		},
+		{
+			"name": "About",
+			"image": "public/img/aboutpg.png",
+			"mobileImage": "public/img/aboutpgmbl.png",
+			"selected": false
+		},
+		{
+			"name": "Projects",
+			"image": "public/img/projectspg.png",
+			"mobileImage": "public/img/projectspgmbl.png",
+			"selected": false
+		},
+		{
+			"name": "Contact",
+			"image": "public/img/contactpg.png",
+			"mobileImage": "public/img/contactpgmbl.png",
+			"selected": false
+		}
+	]
+}

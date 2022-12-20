@@ -7,12 +7,10 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 4rem;
 }
 .container::-webkit-scrollbar {
   display: none;
-}
-.container-padding {
-  padding: 4rem;
 }
 .project-links {
   max-width: 100%;
@@ -22,8 +20,6 @@
   background-color: #252525;
   position: relative;
   gap: 2rem;
-}
-.project-links-padding {
   padding: 4rem;
 }
 .h1 {

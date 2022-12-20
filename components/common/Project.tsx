@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import styles from "styles/ProjectTemplate.module.scss";
+import styles from "styles/Project.module.scss";
 
 type ProjectProps = {
 	projectName: string;
@@ -13,7 +13,7 @@ type ProjectProps = {
 	projectDescription: string;
 	projectColorTheme: string;
 };
-const ProjectTemplate = ({
+const Project = ({
 	projectName,
 	projectDate,
 	projectRoles,
@@ -89,4 +89,4 @@ const ProjectTemplate = ({
 	);
 };
 
-export default ProjectTemplate;
+export default Project;
