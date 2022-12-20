@@ -6,7 +6,7 @@ import path from "path";
 // retrieves all of the project data from projects.json
 export const getStaticProps = async () => {
 	const filePath = path.join(process.cwd(), "json/projects.json");
-	const jsonData = await fsPromises.readFile(filePath);
+	const jsonData:any = await fsPromises.readFile(filePath);
 	const objectData = JSON.parse(jsonData);
 
 	return {
@@ -14,12 +14,16 @@ export const getStaticProps = async () => {
 	};
 };
 
-const Projects = ({ projects }) => {
+type ProjectsProps = {
+	projects: any
+}
+
+const Projects = ({ projects }: ProjectsProps) => {
 	return (
 		<div className={`${styles.container} fade-in`}>
 			<h1 className={styles.h1}>Projects</h1>
 			<div className={styles["project-links"]}>
-				{projects.map((project) => {
+				{projects.map((project:any) => {
 					return (
 						<ProjectCard
 							projectName={project.name}

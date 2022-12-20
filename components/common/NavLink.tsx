@@ -19,18 +19,18 @@ const Navlink = ({
 	setCurrentPage,
 }: NavlinkProps) => {
 	const changePage = () => {
-		setCurrentPage((draft) => {
-			draft.map((page) => {
+		setCurrentPage((draft:any) => {
+			draft.map((page:any) => {
 				if (page.name == linkName) {
-					draft[draft.findIndex(({ name }) => name === linkName)].selected =
+					draft[draft.findIndex(({ name }:any) => name === linkName)].selected =
 						true;
 				} else {
-					draft[draft.findIndex(({ name }) => name === page.name)].selected =
+					draft[draft.findIndex(({ name }:any) => name === page.name)].selected =
 						false;
 				}
 			});
 		});
-		setNavToggle((draft) => !draft);
+		setNavToggle((draft:any) => !draft);
 	};
 
 	return (

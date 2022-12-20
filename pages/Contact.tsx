@@ -19,7 +19,7 @@ const Contact = () => {
 	const [submitted, setSubmitted] = useState(false);
 
 	// sends to https://dashboard.emailjs.com/admin
-	const sendEmail = (e) => {
+	const sendEmail = (e:any) => {
 		console.log("subbed");
 		e.preventDefault();
 

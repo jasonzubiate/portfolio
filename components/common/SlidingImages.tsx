@@ -23,7 +23,7 @@ import snowPatio from "public/img/snowPatio.jpg";
 
 const SlidingImages = () => {
 	// Create a ref to the div element
-	const containerRef = useRef(null);
+	const containerRef:any = useRef();
 
 	useEffect(() => {
 		// Get the current scroll position

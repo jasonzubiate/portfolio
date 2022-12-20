@@ -4,7 +4,11 @@ import styles from "styles/Project.module.scss";
 import fsPromises from "fs/promises";
 import path from "path";
 
-const Project = ({ project }) => {
+type ProjectProps = {
+	project:any
+};
+
+const Project = ({ project }: ProjectProps) => {
 	return (
 		<div className={`${styles.container} fade-in`}>
 			<div
@@ -32,7 +36,7 @@ const Project = ({ project }) => {
 					<div>
 						<div className={styles["additional-info-title"]}>Role</div>
 						<div className={styles["additional-info-content"]}>
-							{project.roles.map((role) => {
+							{project.roles.map((role:string) => {
 								if (project.roles.indexOf(role) + 1 != project.roles.length) {
 									return `${role} • `;
 								} else {
@@ -45,7 +49,7 @@ const Project = ({ project }) => {
 						<div>
 							<div className={styles["additional-info-title"]}>Tools</div>
 							<div className={styles["additional-info-content"]}>
-								{project.tools.map((tool) => {
+								{project.tools.map((tool:string) => {
 									if (project.tools.indexOf(tool) + 1 != project.tools.length) {
 										return `${tool} • `;
 									} else {
@@ -75,10 +79,10 @@ export default Project;
 
 export const getStaticPaths = async () => {
 	const filePath = path.join(process.cwd(), "json/projects.json");
-	const jsonData = await fsPromises.readFile(filePath);
+	const jsonData:any = await fsPromises.readFile(filePath);
 	const objectData = JSON.parse(jsonData);
 
-	const paths = objectData.projects.map((project) => {
+	const paths = objectData.projects.map((project:any) => {
 		return {
 			params: { id: project.name },
 		};
@@ -90,12 +94,12 @@ export const getStaticPaths = async () => {
 	};
 };
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context:any) => {
 	const id = context.params.id;
 	const filePath = path.join(process.cwd(), "json/projects.json");
-	const jsonData = await fsPromises.readFile(filePath);
+	const jsonData:any = await fsPromises.readFile(filePath);
 	const objectData = JSON.parse(jsonData);
-	const data = objectData.projects.filter((project) => project.name === id)[0];
+	const data = objectData.projects.filter((project:any) => project.name === id)[0];
 
 	return {
 		props: { project: data },
