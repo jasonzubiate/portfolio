@@ -54,7 +54,7 @@
 		"projectCardImage": "uxProjectCardImage.png",
 		"projectImage": "uxProjectImage.png",
 		"link": "https://sites.google.com/uci.edu/jasonzubiateportfolio132/home",
-		"colorTheme": "white",
+		"colorTheme": "#3B6AA0",
 		"value": false,
 		"description": "Throughout the recent pandemic, students within higher education were among the first to transition to remote learning and experience various software platforms used by professors for their teaching methods. During this time, these learning management systems experienced user traffic at an all-time high. Motivated by previous experiences on these platforms, our team sought after the leading problems these systems had within higher education learning. Our case study has found the need for change within the frameworks of the most popular learning management systems. Doing so will bring tremendous benefits to both educators and students.",
 		"roles": ["UX/UI Designer", "UX Researcher"],
