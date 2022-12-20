@@ -5,8 +5,6 @@ import fsPromises from "fs/promises";
 import path from "path";
 
 const Project = ({ project }) => {
-	console.log(project);
-
 	return (
 		<div className={`${styles.container} fade-in`}>
 			<div
