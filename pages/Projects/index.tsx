@@ -3,13 +3,18 @@ import ProjectCard from "../../components/common/ProjectCard";
 import fsPromises from "fs/promises";
 import path from "path";
 
-const Projects = (props) => {
-	// project data from the projects.json
-	const projects = props.projects;
+// retrieves all of the project data from projects.json
+export const getStaticProps = async () => {
+	const filePath = path.join(process.cwd(), "json/projects.json");
+	const jsonData = await fsPromises.readFile(filePath);
+	const objectData = JSON.parse(jsonData);
 
-	// base path for all projectCard images
-	const imageBasePath = "/img";
+	return {
+		props: objectData,
+	};
+};
 
+const Projects = ({ projects }) => {
 	return (
 		<div className={`${styles.container} fade-in`}>
 			<h1 className={styles.h1}>Projects</h1>
@@ -19,7 +24,7 @@ const Projects = (props) => {
 						<ProjectCard
 							projectName={project.name}
 							projectDate={project.date}
-							projectImage={`${imageBasePath}/${project.projectCardImage}`}
+							projectImage={`/img/${project.projectCardImage}`}
 						/>
 					);
 				})}
@@ -29,13 +34,3 @@ const Projects = (props) => {
 };
 
 export default Projects;
-
-export async function getStaticProps() {
-	const filePath = path.join(process.cwd(), "json/projects.json");
-	const jsonData = await fsPromises.readFile(filePath);
-	const objectData = JSON.parse(jsonData);
-
-	return {
-		props: objectData,
-	};
-}
