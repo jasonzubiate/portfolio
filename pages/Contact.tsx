@@ -15,15 +15,12 @@ import { BsLinkedin, BsGithub, BsFileEarmarkText } from "react-icons/bs";
 // EMAILJS
 import emailjs from "@emailjs/browser";
 
-const Result = () => {
-	return <p>Sent</p>;
-};
-
 const Contact = () => {
 	const [submitted, setSubmitted] = useState(false);
 
 	// sends to https://dashboard.emailjs.com/admin
 	const sendEmail = (e) => {
+		console.log("subbed");
 		e.preventDefault();
 
 		emailjs
@@ -47,21 +44,25 @@ const Contact = () => {
 
 	setTimeout(() => {
 		setSubmitted(false);
-	}, 2000);
+	}, 3000);
 
 	return (
 		<div className={`${styles.container} fade-in`}>
 			<div className={styles["container-left"]}>
 				<div className={styles["image-container"]}>
-					<Image className={styles.image} src={home} alt="picture" fill quality={100} priority/>
+					<Image
+						className={styles.image}
+						src={home}
+						alt="picture"
+						fill
+						quality={100}
+						priority
+					/>
 				</div>
 			</div>
 			<div className={styles["container-right"]}>
 				<div className={styles.title}>Get In Touch</div>
 				<div className={styles["contact-content"]}>
-					{/* <div className={styles["message-sent"]}>
-						{submitted ? <Result /> : null}
-					</div> */}
 					<form action="" onSubmit={sendEmail} className={styles.form}>
 						<input
 							className={styles.input}
@@ -86,11 +87,11 @@ const Contact = () => {
 							name="message"
 							required
 						/>
+						{submitted && (
+							<label className={styles["submission-notification"]}>Sent</label>
+						)}
 						<div>
 							<button className={styles.btn}>Submit</button>
-						</div>
-						<div className={styles["message-sent"]}>
-							{submitted && <Result />}
 						</div>
 					</form>
 					<div className={styles["misc-content"]}>
