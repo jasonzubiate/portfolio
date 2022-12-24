@@ -5,7 +5,7 @@ import fsPromises from "fs/promises";
 import path from "path";
 
 type ProjectProps = {
-	project:any
+	project: any;
 };
 
 const Project = ({ project }: ProjectProps) => {
@@ -16,7 +16,9 @@ const Project = ({ project }: ProjectProps) => {
 				className={styles["container-left"]}
 			>
 				<h1 className={styles.header}>{project.name}</h1>
-				<p className={styles["project-description"]}>{project.description}</p>
+				{project.description.map((paragraph: string) => {
+					return <p className={styles["project-description"]}>{paragraph}</p>;
+				})}
 				{project.link !== "" ? (
 					<Link
 						className={styles["project-link"]}
@@ -36,7 +38,7 @@ const Project = ({ project }: ProjectProps) => {
 					<div>
 						<div className={styles["additional-info-title"]}>Role</div>
 						<div className={styles["additional-info-content"]}>
-							{project.roles.map((role:string) => {
+							{project.roles.map((role: string) => {
 								if (project.roles.indexOf(role) + 1 != project.roles.length) {
 									return `${role} • `;
 								} else {
@@ -49,7 +51,7 @@ const Project = ({ project }: ProjectProps) => {
 						<div>
 							<div className={styles["additional-info-title"]}>Tools</div>
 							<div className={styles["additional-info-content"]}>
-								{project.tools.map((tool:string) => {
+								{project.tools.map((tool: string) => {
 									if (project.tools.indexOf(tool) + 1 != project.tools.length) {
 										return `${tool} • `;
 									} else {
@@ -79,10 +81,10 @@ export default Project;
 
 export const getStaticPaths = async () => {
 	const filePath = path.join(process.cwd(), "json/projects.json");
-	const jsonData:any = await fsPromises.readFile(filePath);
+	const jsonData: any = await fsPromises.readFile(filePath);
 	const objectData = JSON.parse(jsonData);
 
-	const paths = objectData.projects.map((project:any) => {
+	const paths = objectData.projects.map((project: any) => {
 		return {
 			params: { id: project.name },
 		};
@@ -94,12 +96,14 @@ export const getStaticPaths = async () => {
 	};
 };
 
-export const getStaticProps = async (context:any) => {
+export const getStaticProps = async (context: any) => {
 	const id = context.params.id;
 	const filePath = path.join(process.cwd(), "json/projects.json");
-	const jsonData:any = await fsPromises.readFile(filePath);
+	const jsonData: any = await fsPromises.readFile(filePath);
 	const objectData = JSON.parse(jsonData);
-	const data = objectData.projects.filter((project:any) => project.name === id)[0];
+	const data = objectData.projects.filter(
+		(project: any) => project.name === id
+	)[0];
 
 	return {
 		props: { project: data },
