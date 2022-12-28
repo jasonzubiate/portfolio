@@ -7,7 +7,6 @@
 	flex-flow: column wrap;
 	width: 50%;
 	height: 100vh;
-	color: black;
 	position: relative;
 	padding: 3rem;
 	overflow: hidden;
@@ -127,10 +126,10 @@
 		flex-direction: column-reverse;
 	}
 	.container > .container-right {
-		width: 100vw;
+		width: 100%;
 	}
 	.container > .container-left {
-		width: 100vw;
+		width: 100%;
 		padding: 3rem 2rem;
 	}
 	.container > .container-left > .header {
