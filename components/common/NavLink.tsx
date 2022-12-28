@@ -41,7 +41,7 @@ const Navlink = ({
 		>
 			<div className={styles["label-group"]}>
 				{selected ? <div className={styles["active-circle"]}></div> : null}
-				<h2 className={`${styles["nav-link-label"]} rubik-font`}>{linkName}</h2>
+				<h2 className={styles["nav-link-label"]}>{linkName}</h2>
 			</div>
 			<div className={styles["nav-link-image"]}>
 				<Image

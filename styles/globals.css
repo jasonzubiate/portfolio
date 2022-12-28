@@ -13,10 +13,20 @@
 	box-sizing: border-box;
 }
 
-/* UTILITIES */
-.rubik-font {
-	font-family: "Rubik", sans-serif;
+/* VARIABLES */
+:root {
+	/* FONT */
+	--FF: "Sora", sans-serif;
+
+	/* COLORS */
+	--BGCOLOR: #f1efe7;
+	--PRIMARYCOLOR: #c35e39;
+	--SECONDARYCOLOR: #6e260e;
+	--HOVERCOLOR: #6f4e37;
+	--ACTIVECOLOR: #4169e1;
 }
+
+/* UTILITIES */
 .shifted-main {
 	transform: translateY(-50%);
 }
@@ -32,29 +42,17 @@
 	}
 }
 
-/* COLORS */
-.cadmlum-orange {
-	color: #f28c28;
-}
-.burnt-umber {
-	color: #6e260e;
-}
-.coffe-brown {
-	color: #6f4e37;
-}
-
 body,
 main {
 	height: 100vh;
 	width: 100vw;
 	background-color: black;
-	font-family: "Sora", sans-serif;
+	font-family: var(--FF);
 }
 main {
-	background-color: #f1efe7;
+	background-color: var(--BGCOLOR);
 	position: relative;
 	z-index: 2;
-	/* transition: property duration timing-functinon delay */
 	transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
 	overflow-y: auto;
 }
@@ -62,7 +60,7 @@ main {
 	/* display: none; */
 	height: 5rem;
 	width: 5rem;
-	background-color: #977f6e;
+	background-color: var(--PRIMARYCOLOR);
 	box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 35%);
 	border-radius: 5rem;
 	border: none;
@@ -72,9 +70,7 @@ main {
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 3rem;
-	transition: transform, background-color;
-	transition-timing-function: ease;
-	transition-duration: 400ms;
+	transition: transform 400ms ease;
 	cursor: pointer;
 }
 #nav-toggle:hover {
