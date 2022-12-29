@@ -15,7 +15,7 @@ const Project = ({ project }: ProjectProps) => {
 				style={{ backgroundColor: project.colorTheme }}
 				className={styles["container-left"]}
 			>
-				<h1 className={styles.header}>{project.name}</h1>
+				<h1 className={styles.h1}>{project.name}</h1>
 				{project.description.map((paragraph: string) => {
 					return <p className={styles["project-description"]}>{paragraph}</p>;
 				})}
@@ -40,9 +40,13 @@ const Project = ({ project }: ProjectProps) => {
 						<div className={styles["additional-info-content"]}>
 							{project.roles.map((role: string) => {
 								if (project.roles.indexOf(role) + 1 != project.roles.length) {
-									return `${role} • `;
+									return (
+										<span>
+											<span className={styles["no-wrap"]}>{role}</span> •{" "}
+										</span>
+									);
 								} else {
-									return role;
+									return <span className={styles["no-wrap"]}>{role}</span>;
 								}
 							})}
 						</div>

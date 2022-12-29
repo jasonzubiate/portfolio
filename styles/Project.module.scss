@@ -1,3 +1,8 @@
+// UTILITIES
+.no-wrap {
+	white-space: nowrap;
+}
+
 .container {
 	width: 100%;
 	display: flex;
@@ -11,7 +16,7 @@
 	padding: 3rem;
 	overflow: hidden;
 }
-.container > .container-left > .header {
+.container > .container-left > .h1 {
 	font-size: 0.9rem;
 	font-weight: 600;
 	margin-bottom: 1rem;
@@ -47,10 +52,6 @@
 	text-transform: uppercase;
 	margin-bottom: 0.5rem;
 }
-.container > .container-left > .additional-info .additional-info-content {
-	flex-wrap: wrap;
-	max-width: 100%;
-}
 .container > .container-right {
 	width: 50%;
 }
@@ -64,7 +65,7 @@
 	height: 100vh;
 }
 @media screen and (max-width: 1300px) {
-	.container > .container-left > .header {
+	.container > .container-left > .h1 {
 		font-size: 0.7rem;
 		margin: 1rem 0rem;
 	}
@@ -83,7 +84,7 @@
 	}
 }
 @media screen and (max-width: 1024px) and (max-height: 1366px) {
-	.container > .container-left > .header {
+	.container > .container-left > .h1 {
 		font-size: 0.8rem;
 		margin: 1rem 0rem;
 	}
@@ -102,7 +103,7 @@
 	}
 }
 @media screen and (max-width:820px) {
-	.container > .container-left > .header {
+	.container > .container-left > .h1 {
 		font-size: 0.6rem;
 		margin: 1rem 0rem;
 	}
@@ -116,36 +117,36 @@
 	.container > .container-left > .additional-info {
 		width: 70%;
 		bottom: 5rem;
-		font-size: 0.6
-		rem;
+		font-size: 0.6rem;
 		gap: 2rem;
 	}
 }
 @media screen and (max-width: 640px) {
 	.container {
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 	.container > .container-right {
 		width: 100%;
 	}
 	.container > .container-left {
 		width: 100%;
-		padding: 3rem 2rem;
+		padding: 3rem 1.5rem;
 	}
-	.container > .container-left > .header {
-		font-size: 0.6rem;
+	.container > .container-left > .h1 {
+		font-size: 0.7rem;
 		margin: 1rem 0rem;
 	}
 	.container > .container-left > .project-description {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		width: 100%;
 	}
 	.container > .container-left > .project-link {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 	}
 	.container > .container-left > .additional-info {
-		width: 80%;
-		bottom: 9rem;
-		font-size: 0.6rem;
+		width: 85%;
+		bottom: 8rem;
+		font-size: 0.65rem;
+		gap: 1.5rem;
 	}
 }
