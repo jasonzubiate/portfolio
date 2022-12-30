@@ -61,7 +61,7 @@ const Contact = () => {
 				</div>
 			</div>
 			<div className={styles["container-right"]}>
-				<div className={styles.title}>Get In Touch</div>
+				<h1 className={styles.h1}>Get In Touch</h1>
 				<div className={styles["contact-content"]}>
 					<form action="" onSubmit={sendEmail} className={styles.form}>
 						<input

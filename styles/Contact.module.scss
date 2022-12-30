@@ -54,9 +54,6 @@
 	font-size: 1.8rem;
 	font-family: inherit;
 }
-.form:last-child {
-	background-color: red;
-}
 .form > .input:focus,
 .input:valid {
 	outline: none;
@@ -70,7 +67,7 @@
 	width: 100%;
 	background-color: whitesmoke;
 	padding: 1rem;
-	border-radius: .5rem;
+	border-radius: 0.5rem;
 	margin-bottom: 2rem;
 }
 .btn {
@@ -98,7 +95,7 @@
 	flex-direction: column;
 	gap: 5rem;
 }
-.title {
+.h1 {
 	font-size: 4rem;
 	font-weight: 700;
 }
@@ -140,10 +137,15 @@
 	.container-right {
 		width: 100%;
 		overflow-y: scroll;
+		padding: 1.5rem;
+	}
+	.form > .input,
+	.input::placeholder {
+		margin-bottom: 2rem;
 	}
 	.container-right > .contact-content {
-		margin-top: 3rem;
-		height: 135%;
+		margin-top: 2rem;
+		height: 98%;
 		flex-direction: column;
 		justify-content: flex-start;
 		padding: 2rem;
@@ -151,18 +153,20 @@
 	}
 	.contact-content > .misc-content {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 10rem 0;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		gap: 2rem;
+		// background-color: red;
 	}
 	.form {
 		width: 100%;
 	}
-	.title {
-		font-size: 3rem;
+	.h1 {
+		font-size: 2rem;
 		font-weight: 700;
+		margin-top: 1rem;
 	}
 	.form > .input,
 	.input::placeholder {
@@ -176,6 +180,7 @@
 		font-size: 0.8rem;
 	}
 	.btn {
+		margin-top: 2rem;
 		font-size: 1.2rem;
 	}
 }
